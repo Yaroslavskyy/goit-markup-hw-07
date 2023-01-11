@@ -1,0 +1,117 @@
+.project {
+  padding: 94px 15px;
+
+  &-button__items {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px;
+  }
+
+  &-button__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &-button__action {
+    font-family: "Roboto", sans-serif;
+    padding: 6px 22px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    background: $color-whisper;
+    border-radius: 4px;
+    border: none;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+      background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+      box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-dodger-blue;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  /*--PORTFOLIO-project-section--*/
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
+
+  &__item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    width: calc((100% - 60px) / 3);
+    border: 1px solid $color-gallery;
+    box-sizing: border-box;
+    transition: cborder cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+      box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+
+  &__item:hover .project__text {
+    transform: translateY(0);
+  }
+
+  &__item:hover,
+  &__item:focus {
+    border: 1px solid $color-gallery;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $color-white;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    margin: 0;
+    transform: translateY(101%);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+
+  &__info {
+    padding: 20px 24px;
+  }
+
+  &__title {
+    color: $color-mine-shaft;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $color-boulder;
+    margin: 0;
+  }
+}

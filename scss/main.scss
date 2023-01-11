@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+
+@import "./utils/variables";
+
+@import "./base/base";
+@import "./base/normalize";
+
+@import "./components/banner";
+@import "./components/buisineis";
+@import "./components/logo";
+@import "./components/project";
+@import "./components/team";
+@import "./components/value";
+
+@import "./layout/conteiner";
+@import "./layout/footer";
+@import "./layout/form";
+@import "./layout/header";

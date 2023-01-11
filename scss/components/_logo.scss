@@ -1,0 +1,50 @@
+.logo {
+  &__logo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: $color-mine-shaft;
+    padding: 94px 0 50px 0;
+    margin: 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 94px;
+  }
+
+  &__item {
+    display: flexbox;
+    justify-content: center;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: $color-Bombay;
+      transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $color-dodger-blue;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-dodger-blue;
+    }
+  }
+}

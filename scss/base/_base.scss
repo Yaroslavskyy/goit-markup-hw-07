@@ -1,0 +1,112 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: $color-mine-shaft;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-mine-shaft;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  
+  a.active {
+    color: $color-dodger-blue;
+    position: relative;
+  }
+  
+  a.active::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    display: block;
+    content: "";
+    height: 4px;
+    background: $color-dodger-blue;
+    border-radius: 2px;
+  }
+  
+  a:hover,
+  a:focus {
+    color: $color-dodger-blue;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  section {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .backdrop {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transform: scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+      visibility cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+  
+  .is-hidden {
+    visibility: hidden;
+    transform: scale(0);
+  }
+  
+  .modal {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: $color-white;
+    border-radius: 4px;
+    padding: 40px;
+  }
+  
+  .modal__close {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal__close:hover .close__btn {
+    fill: $color-dodger-blue;
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
